@@ -15,6 +15,10 @@ I guess Wyze's rationale was they wanted to prevent some kind of mini PR nightma
 
 But you can't help but wonder why they sat on this patch for so long.. leaving their valued customers vulnerable in the meanwhile!
 
+**UPDATE**: A WyzeCam representative has informed me that:
+
+> I want to clarify a few things; we didn't know about this issue for years, this is an issue in the third-party library we use and we got a report about it just a few days before pwn2own and once we got the report in our bugbounty program we patched the issue in 3 days and released to public.
+
 To celebrate their very wyze (huhu) decision I have decided to release my exploit to the public. Maybe next time they will prefer doing a coordinated disclosure through the ZDI program rather than frustrating a few contestants post-deadline.
 
 ## the bugs
@@ -33,7 +37,7 @@ Thus we don't need any additional information leaks to bypass ASLR or leak a can
 
 ## Exploit
 
-The exploit will use the vulnerabilities described above to spawn an interactive (bind)shell. I have taken the liberty to backport the exploit to some older Wyze cam V3 versions as well, just because.
+The exploit will use the vulnerabilities described above to spawn an interactive (connectback)shell. I have taken the liberty to backport the exploit to some older Wyze cam V3 versions as well, just because.
 
 The exploit has been tested on the following firmwares:
 
